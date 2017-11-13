@@ -16,26 +16,16 @@
  limitations under the License.
 -->
 
-## What is Apache Tephra <sup>(TM)</sup>
-Apache Tephra provides globally consistent transactions on top of distributed data stores
-such as [Apache HBase](https://hbase.apache.org). While HBase provides strong consistency with row- or
-region-level ACID operations, it sacrifices cross-region and cross-table consistency in favor of
-scalability. This trade-off requires application developers to handle the complexity of ensuring
-consistency when their modifications span region boundaries. By providing support for global
-transactions that span regions, tables, or multiple RPCs, Tephra simplifies application development
-on top of HBase, without a significant impact on performance or scalability for many workloads.
-
-Tephra is used by the [Apache Phoenix](https://phoenix.apache.org/transactions.html) as well
-to add cross-row and cross-table transaction support with full ACID semantics.
-
-Please refer to the [Getting Started](http://tephra.incubator.apache.org/GettingStarted.html) guide to
-start using [Apache Tephra](http://tephra.incubator.apache.org).
-
 ## Building
 You can build Tephra directly from the latest source code:
 
 ```sh
   git clone https://git-wip-us.apache.org/repos/asf/incubator-tephra.git
   cd incubator-tephra
-  mvn clean package
+  mvn clean package -fn
+
+if want to build with Ekstazi: 
+  mvn ekstazi:ekstazi -fn
 ```
+if want to build with Starts:
+  mvn starts:starts -fn
