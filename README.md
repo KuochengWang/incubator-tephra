@@ -24,8 +24,10 @@ You can build Tephra directly from the latest source code:
   cd incubator-tephra
   mvn clean package -fn
 
-if want to build with Ekstazi: 
+  if want to build with Ekstazi: 
   mvn ekstazi:ekstazi -fn
+
+  if you want build with STARTS:
+  mvn starts:starts -fn 
 ```
-if want to build with Starts:
-  mvn starts:starts -fn
+
